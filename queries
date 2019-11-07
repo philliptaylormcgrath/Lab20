@@ -1,0 +1,19 @@
+Lab 20 queries 
+
+1. select * from customers;
+2. select distinct Country from customers;
+3. SELECT * from customers WHERE (CustomerID LIKE 'BL%');
+4. select * from customers limit 100;
+5. select * from customers where PostalCode like "1010" or PostalCode like "3012" or PostalCode like "12209" or PostalCode like "05023"; 
+6. select * from orders where ShipRegion != 'null';
+7. select * from customers order by Country, city;
+8. INSERT INTO `northwind`.`customers` (`CustomerID`, `CompanyName`, `ContactName`, `ContactTitle`, `Address`, `City`, `Region`, `PostalCode`, `Country`, `Phone`, `Fax`) VALUES ('SEAN', 'The Circus', 'Amaz0', 'GM', '123 Woodward', 'Detroit', 'MI', '48311', 'USA', '248-842-2482', '224443333');
+9. update orders set shipregion = "Euro Zone" where shipcountry = "France";
+10. delete from northwind.`order details` where quantity = '1';
+11. SELECT AVG(quantity) from northwind.`order details`;
+selECT max(quantity) from northwind.`order details`;
+select min(quantity) from northwind.`order details`;
+12. select customerID from orders where orderid = 10290;
+13. select * from orders o left outer join customers c on o.customerID = c.customerID;
+14. select employees.firstname from employees where reportsto is null;
+15. select employees.firstname from employees where reportsto = '2';
